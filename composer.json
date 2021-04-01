@@ -1,25 +1,25 @@
 {
-	"name": "beaudurrant/federated-canada-payment-gateway-api",
-	"description": "Classes and tests to connect to Federated Canada's Payment Gateway",
-	"type": "library",
-	"license": "MIT",
-	"require": {
-		"php": ">=7.4"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "^9"
-	},
-	"scripts": {
-		"test": "./vendor/bin/phpunit -c phpunit.xml --bootstrap tests/bootstrap.php"
-	},
-	"autoload": {
-		"psr-4": {
-			"FederatedCanada\\": "src/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"FederatedCanada\\Tests\\": "tests/"
-		}
-	}
+  "name": "beaudurrant/federated-canada-payment-gateway-api",
+  "description": "Classes and tests to connect to Federated Canada's Payment Gateway",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml --bootstrap tests/bootstrap.php"
+  },
+  "autoload": {
+    "psr-4": {
+      "FederatedCanada\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FederatedCanada\\Tests\\": "tests/"
+    }
+  }
 }
