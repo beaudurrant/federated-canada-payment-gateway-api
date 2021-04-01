@@ -11,7 +11,7 @@ class UpdateTest extends TestCase {
   public function testUpdateSuccess() {
     $sale = new Sale();
     $sale->setCredentials(FEDERATED_USERNAME, FEDERATED_PASSWORD);
-    $sale->setCreditCardInfo('4111111111111111', '1010', '999', 10.00);
+    $sale->setCreditCardInfo(4111111111111111, 1010, 999, 10.00);
     $sale->setOrderInfo('12345', 'Test Sale');
     $sale->process('192.168.0.1');
     $update = new Update($sale->response->transactionid, null, 'fedex', null);

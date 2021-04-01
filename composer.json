@@ -10,7 +10,7 @@
     "phpunit/phpunit": "^9"
   },
   "scripts": {
-    "test": "./vendor/bin/phpunit -c phpunit.xml --bootstrap tests/bootstrap.php"
+    "test": "./vendor/bin/phpunit -c phpunit.xml --bootstrap bootstrap.php"
   },
   "autoload": {
     "psr-4": {

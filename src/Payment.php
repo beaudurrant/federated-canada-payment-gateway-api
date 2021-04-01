@@ -23,9 +23,9 @@ namespace FederatedCanada;
 abstract class Payment extends Transaction {
   
   /* CC info required */
-  protected string $ccnumber;                // Credit card number
-  protected string $ccexp;                   // Credit card expiration (ie. 0711 = 7/2011)
-  protected string $cvv;                     // Card security code
+  protected int $ccnumber;                   // Credit card number
+  protected int $ccexp;                      // Credit card expiration (ie. 0711 = 7/2011)
+  protected int $cvv;                        // Card security code
   
   /* Check info required */
   protected string $checkname;               // Customers name on ACH account
@@ -75,14 +75,14 @@ abstract class Payment extends Transaction {
   /**
    * Set credit card info (setCreditCardInfo or setCheckInfo must be called to process)
    * 
-   * @param string $ccnumber
-   * @param string $ccexp
-   * @param string $cvv
+   * @param int $ccnumber
+   * @param int $ccexp
+   * @param int $cvv
    * @param string $amount
    * @param string tax (optional)
    * @param string shipping (optional)
    */
-  public function setCreditCardInfo(string $ccnumber, string $ccexp, string $cvv, string $amount, float $tax = 0.00, float $shipping = 0.00) : void {
+  public function setCreditCardInfo(int $ccnumber, int $ccexp, int $cvv, string $amount, float $tax = 0.00, float $shipping = 0.00) : void {
     $this->payment = 'creditcard';
     $this->ccnumber = $ccnumber;
     $this->ccexp = $ccexp;

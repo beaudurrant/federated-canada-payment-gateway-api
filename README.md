@@ -13,3 +13,9 @@ PHP >= 7.4
 ```sh
 $  composer require beaudurrant/federated-canada-payment-gateway-api
 ```
+
+## Tests
+
+```sh
+$  composer test
+```

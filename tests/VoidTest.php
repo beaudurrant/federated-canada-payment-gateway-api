@@ -12,7 +12,7 @@ class VoidTest extends TestCase {
   public function testVoidSaleSuccess() {
     $sale = new Sale();
     $sale->setCredentials(FEDERATED_USERNAME, FEDERATED_PASSWORD);
-    $sale->setCreditCardInfo('4111111111111111', '1010', '999', 100.00);
+    $sale->setCreditCardInfo(4111111111111111, 1010, 999, 100.00);
     $sale->process('192.168.0.1');
     $void = new Voided($sale->response->transactionid);
     $void->setCredentials(FEDERATED_USERNAME, FEDERATED_PASSWORD);
@@ -23,7 +23,7 @@ class VoidTest extends TestCase {
   public function testVoidAuthorizationSuccess() {
     $auth = new Authorization();
     $auth->setCredentials(FEDERATED_USERNAME, FEDERATED_PASSWORD);
-    $auth->setCreditCardInfo('4111111111111111', '1010', '999', 100.00);
+    $auth->setCreditCardInfo(4111111111111111, 1010, 999, 100.00);
     $auth->process('192.168.0.1');
     $void = new Voided($auth->response->transactionid);
     $void->setCredentials(FEDERATED_USERNAME, FEDERATED_PASSWORD);
